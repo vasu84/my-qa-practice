@@ -1,0 +1,99 @@
+package com.fbsignup;
+
+
+import java.io.File;
+import java.io.IOException;
+import java.util.Iterator;
+import java.util.List;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class signup {
+
+	public static void main(String[] args) throws InterruptedException, IOException {
+		// TODO Auto-generated method stub
+System.setProperty("webdriver.chrome.driver", 
+		"C:\\Users\\XSC-10286\\eclipse-workspace\\fbsignup\\chrmdriver\\chromedriver.exe");
+WebDriver driver = new ChromeDriver();
+driver.get("https://www.facebook.com/signup");
+driver.manage().window().maximize();
+/*WebElement firstName = driver.findElement(By.name("firstname"));
+firstName.sendKeys("siva  ");
+WebElement lastName = driver.findElement(By.name("lastname"));
+lastName.sendKeys("chandu mondeti");
+WebElement mail = driver.findElement(By.xpath("(//input[@type='text'])[3]"));
+mail.sendKeys("stfctdhg@gmaall.comm");
+WebElement remail = driver.findElement(By.xpath("(//input[@type='text'])[4]"));
+remail.sendKeys("stfctdhg@gmaall.comm");
+WebElement password = driver.findElement(By.xpath("//input[@type='password']"));
+password.sendKeys("asdfgsg2546@3#$");*/
+//Using send keys
+List<WebElement> day = driver.findElements(By.id("day"));
+for (WebElement day1 : day) {
+	String text = day1.getText();
+	System.out.println(text);
+}
+//day.click();
+//day.sendKeys("16");
+//Select a = new Select(day);
+//a.selectByIndex(10);
+//Thread.sleep(500);
+
+WebElement month = driver.findElement(By.id("month"));
+month.click();
+Select b = new Select(month);
+b.selectByValue("7");
+Thread.sleep(500);
+List<WebElement> allselected = b.getAllSelectedOptions();
+
+/*for (WebElement we : allselected) {
+	String text2 = we.getText();
+	System.out.println(text2);
+	
+}*/
+      // select the year by using java script method 
+WebElement year = driver.findElement(By.id("year"));
+year.click();
+JavascriptExecutor js = (JavascriptExecutor) driver;
+js.executeScript("arguments[0].value='1997'", year);
+
+
+/*Select c = new Select(year);
+c.selectByVisibleText("1990");
+Thread.sleep(500);/*
+
+WebElement sex = driver.findElement(By.name("sex"));
+sex.click();
+
+Thread.sleep(1000);
+
+WebElement sexm = driver.findElement(By.xpath("(//input[@type='radio'])[2]"));
+sexm.click();
+Thread.sleep(1000);
+
+WebElement sexc = driver.findElement(By.xpath("(//input[@type='radio'])[3]"));
+sexc.click();
+Thread.sleep(1000);
+
+WebElement he = driver.findElement(By.xpath("/html/body/div[1]/div[1]/div[1]/div[2]/div/div[2]/div/div/div[1]/form/div[1]/div[8]/div[1]/select"));
+he.click();
+//indicating driver
+TakesScreenshot ss = (TakesScreenshot) driver;
+//Taking screenshot-source
+File ss1 = ss.getScreenshotAs(OutputType.FILE);
+//Location-location
+File ss2 = new File("C:\\Users\\XSC-10286\\eclipse-workspace\\fbsignup\\Screenshot\\vasu.png");
+//Copy the file 
+FileUtils.copyFile(ss1, ss2);*/
+
+	}
+
+}

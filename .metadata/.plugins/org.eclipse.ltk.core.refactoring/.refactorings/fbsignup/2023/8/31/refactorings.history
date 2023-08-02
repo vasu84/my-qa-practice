@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;chromedriver.exe&apos; to &apos;chrome driver&apos;&#x0D;&#x0A;- Original project: &apos;fbsignup&apos;&#x0D;&#x0A;- Destination element: &apos;chrome driver&apos;&#x0D;&#x0A;- Original element: &apos;chromedriver.exe&apos;" description="Copy file" element1="chromedriver/chromedriver.exe" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1690875880401" target="/seleniumBasicPractice/chrome driver" units="0" version="1.0"/>
+</session>

@@ -1,0 +1,13 @@
+deviceName=D2502
+browserTitle=Guide Junior
+udid=YT910XK7FL
+platformName=Android
+platformVersion=5.1.1
+appPackage=com.guidejunior
+launcherActivity=com.guidejunior.ui.router.RouterActivity
+url=http://127.0.0.1:4723/wd/hub
+mailid=raji@gmail.com
+password=Raji283!
+
+
+

@@ -1,0 +1,9 @@
+package com.java_practice;
+
+public class Date {
+public static void main(String[] args) {
+	
+	Date currentDate = new Date();
+	System.out.println(currentDate);
+}
+}

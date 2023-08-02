@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<listeners>
+		<listener class-name="com.takingScreenShot.ITestListenerClass"></listener>
+	</listeners>
+	
+  <test  name="Test">
+    <classes>
+      <class name="testScreenShot.TestClass">
+      <methods>
+		  <include name="TestGoogle"/>
+		  
+		  <include name="TestOrangeHRM"/>
+		  
+		  <include name="TestFacebook"/>
+	  </methods>
+      </class>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

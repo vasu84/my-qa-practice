@@ -1,0 +1,135 @@
+package com.intel;
+
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.Toolkit;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.Test;
+
+public class SubjectIntel extends Login_Pgae_Intel {
+
+	@Test(priority=0)
+	public void Subject() throws InterruptedException, AWTException {
+		WebElement subject = driver.findElement(By.linkText("SUBJECT"));
+		subject.click();
+		 
+		driver.findElement(By.xpath("//span[text()='Class Subjects']")).click();
+		Thread.sleep(2000);
+		
+		driver.findElement(By.className("name")).click(); // selecting class 1st click
+		Thread.sleep(1000);
+		
+		driver.findElement(By.className("name")).click(); // selecting class 2 nd click
+		Thread.sleep(1000);
+		
+		driver.findElement(By.id("class-syllabus")).click(); // selecting subject
+		Thread.sleep(1000);
+		 
+		  // adding syllabus
+		
+		           // session id
+		WebElement sessionId = driver.findElement(By.id("sessions-id")); 
+		
+		sessionId.click();
+		
+		// creating object  for selecting year, we mentioned session id in paranthesis because we are creating object for that particular element in select class.
+		Select year= new Select(sessionId); 
+		year.selectByIndex(2);
+		
+		Thread.sleep(1000);
+		
+		            // class id
+		WebElement classId = driver.findElement(By.id("classes-id")); 
+		
+		classId.click();
+		Thread.sleep(1000);
+		
+		      // creating object  for selecting class
+		Select class1 = new Select(classId); 
+		class1.selectByIndex(4);
+		Thread.sleep(1000);
+		
+        // selecting subject
+		 WebElement subject1 = driver.findElement(By.id("subjects-id")); 
+		
+		 subject1.click();
+		Thread.sleep(1000);
+		
+		      // creating object  for selecting class
+		Select a = new Select(subject1); 
+		a.selectByIndex(6);
+		Thread.sleep(1000);
+		
+		// topic order
+		driver.findElement(By.id("order_id")).sendKeys("1");
+		Thread.sleep(1000);
+		
+		// topic name
+		
+		driver.findElement(By.id("topics_id")).sendKeys("number system");
+		Thread.sleep(1000);
+		
+		// adding topic
+		
+		driver.findElement(By.xpath("//span[text()='Add']")).click();
+		Thread.sleep(1000);
+		
+		// importing file
+		
+		driver.findElement(By.xpath("//span[text()='Import']")).click();
+		Thread.sleep(1000);
+		
+		driver.findElement(By.xpath("//input[@id='import-image']")).click();
+		Thread.sleep(1000);
+		
+	/*	 // robot class
+		
+		Robot  rb = new Robot();
+		 
+		//copying file path clipboard
+		StringSelection str= new StringSelection("C:\\Users\\XSC-10286\\Downloads\\crick dost login.xlsx");
+		
+		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(str, null);
+		
+		     //pressing CONTOL+V  for pasting 
+		rb.keyPress(KeyEvent.VK_CONTROL);
+		rb.keyPress(KeyEvent.VK_V);
+		
+		// release the control+v button 
+		rb.keyRelease(KeyEvent.VK_CONTROL);
+		rb.keyRelease(KeyEvent.VK_V);
+		
+		// for pressing  clicking enter, and for release clicking enter  
+		rb.keyPress(KeyEvent.VK_ENTER);
+		rb.keyPress(KeyEvent.VK_ENTER); 
+		
+		// submit button
+		
+		driver.findElement(By.xpath("(//button[text()='Submit'])[4]")).click();
+		Thread.sleep(1000);
+		
+		// close the file uploading pop-up
+		
+		driver.findElement(By.className("close")).click();
+		
+		// clicking feedback 
+		driver.findElement(By.xpath("//a[@data-original-title='Feedback']")).click();
+		
+		Thread.sleep(1000);
+		
+		// giving feedback
+		driver.findElement(By.id("complaints")).sendKeys("it takes same topic name in multiple times,,,");
+		
+		Thread.sleep(1000);
+		
+		//submitting the feedback
+		driver.findElement(By.xpath("(//button[text()='Submit'])[2]")).click();*/
+	
+	
+	}
+}

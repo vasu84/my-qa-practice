@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-06-16T18:04:07 IST" name="Default suite" finished-at="2023-06-16T18:04:07 IST" duration-ms="137">
+    <groups>
+      <group name="a">
+        <method signature="Grouping.groupA1()[pri:0, instance:com.seleniumBasicPractice.Grouping@44a7bfbc]" name="groupA1" class="com.seleniumBasicPractice.Grouping"/>
+        <method signature="Grouping.groupA2()[pri:0, instance:com.seleniumBasicPractice.Grouping@44a7bfbc]" name="groupA2" class="com.seleniumBasicPractice.Grouping"/>
+      </group> <!-- a -->
+      <group name="b">
+        <method signature="Grouping.groupB1()[pri:0, instance:com.seleniumBasicPractice.Grouping@44a7bfbc]" name="groupB1" class="com.seleniumBasicPractice.Grouping"/>
+        <method signature="Grouping.groupB2()[pri:0, instance:com.seleniumBasicPractice.Grouping@44a7bfbc]" name="groupB2" class="com.seleniumBasicPractice.Grouping"/>
+      </group> <!-- b -->
+      <group name="c">
+        <method signature="Grouping.groupC1()[pri:0, instance:com.seleniumBasicPractice.Grouping@44a7bfbc]" name="groupC1" class="com.seleniumBasicPractice.Grouping"/>
+        <method signature="Grouping.groupC2()[pri:0, instance:com.seleniumBasicPractice.Grouping@44a7bfbc]" name="groupC2" class="com.seleniumBasicPractice.Grouping"/>
+      </group> <!-- c -->
+    </groups>
+    <test started-at="2023-06-16T18:04:07 IST" name="Default test" finished-at="2023-06-16T18:04:07 IST" duration-ms="137">
+      <class name="com.seleniumBasicPractice.Grouping">
+        <test-method signature="groupA1()[pri:0, instance:com.seleniumBasicPractice.Grouping@44a7bfbc]" started-at="2023-06-16T18:04:07 IST" name="groupA1" finished-at="2023-06-16T18:04:07 IST" duration-ms="12" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- groupA1 -->
+        <test-method signature="groupA2()[pri:0, instance:com.seleniumBasicPractice.Grouping@44a7bfbc]" started-at="2023-06-16T18:04:07 IST" name="groupA2" finished-at="2023-06-16T18:04:07 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- groupA2 -->
+        <test-method signature="groupB1()[pri:0, instance:com.seleniumBasicPractice.Grouping@44a7bfbc]" started-at="2023-06-16T18:04:07 IST" name="groupB1" finished-at="2023-06-16T18:04:07 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- groupB1 -->
+        <test-method signature="groupB2()[pri:0, instance:com.seleniumBasicPractice.Grouping@44a7bfbc]" started-at="2023-06-16T18:04:07 IST" name="groupB2" finished-at="2023-06-16T18:04:07 IST" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- groupB2 -->
+        <test-method signature="groupC1()[pri:0, instance:com.seleniumBasicPractice.Grouping@44a7bfbc]" started-at="2023-06-16T18:04:07 IST" name="groupC1" finished-at="2023-06-16T18:04:07 IST" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- groupC1 -->
+        <test-method signature="groupC2()[pri:0, instance:com.seleniumBasicPractice.Grouping@44a7bfbc]" started-at="2023-06-16T18:04:07 IST" name="groupC2" finished-at="2023-06-16T18:04:07 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- groupC2 -->
+      </class> <!-- com.seleniumBasicPractice.Grouping -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

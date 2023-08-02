@@ -1,0 +1,31 @@
+package com.testng;
+
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+public class DataProvidersClass {
+
+		@Test(dataProvider="sender")
+		public void recivers() {
+		System.out.println();
+		
+		System.out.println();
+		
+		
+		}
+	
+@DataProvider
+public void sender() {
+	Object[][] data= new Object[2][2];
+	
+	data[0][0]="rowdy";
+	data[0][0]="rani";
+
+	data[0][0]="raji";
+	data[0][0]="durga";
+			
+}
+
+}
+
+

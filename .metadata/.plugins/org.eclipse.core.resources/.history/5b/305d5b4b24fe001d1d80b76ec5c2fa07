@@ -1,0 +1,13 @@
+package com.testPractice;
+
+public interface Academic {
+ static void aca_details() {
+static void
+}
+ public static void main (String[]args) {
+	 aca_details();
+ }
+ class  MyProfile implements Academic {
+	     
+ }
+}

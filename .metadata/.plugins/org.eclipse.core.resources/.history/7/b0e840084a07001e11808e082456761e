@@ -1,0 +1,63 @@
+package com.intel;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.Test;
+
+public class SubjectIntel extends Login_Pgae_Intel {
+
+	@Test(priority=0)
+	public void Subject() throws InterruptedException {
+		WebElement subject = driver.findElement(By.linkText("SUBJECT"));
+		subject.click();
+		 
+		driver.findElement(By.xpath("//span[text()='Class Subjects']")).click();
+		Thread.sleep(2000);
+		
+		driver.findElement(By.className("name")).click(); // selecting class 1st click
+		Thread.sleep(1000);
+		
+		driver.findElement(By.className("name")).click(); // selecting class 2 nd click
+		Thread.sleep(1000);
+		
+		driver.findElement(By.id("class-syllabus")).click(); // selecting subject
+		Thread.sleep(1000);
+		 
+		  // adding syllabus
+		
+		           // session id
+		WebElement sessionId = driver.findElement(By.id("sessions-id")); 
+		
+		sessionId.click();
+		
+		// creating object  for selecting year, we mentioned session id in paranthesis because we are creating object for that particular element in select class.
+		Select year= new Select(sessionId); 
+		year.selectByIndex(2);
+		
+		Thread.sleep(1000);
+		
+		            // class id
+		WebElement classId = driver.findElement(By.id("classes-id")); 
+		
+		classId.click();
+		Thread.sleep(1000);
+		
+		      // creating object  for selecting class
+		Select class1 = new Select(classId); 
+		class1.selectByIndex(4);
+		Thread.sleep(1000);
+		
+        // selecting subject
+		 WebElement subject1 = driver.findElement(By.id("subjects-id")); 
+		
+		 subject1.click();
+		Thread.sleep(1000);
+		
+		      // creating object  for selecting class
+		Select a = new Select(subject1); 
+		a.selectByIndex(6);
+		Thread.sleep(1000);
+		
+	}
+}

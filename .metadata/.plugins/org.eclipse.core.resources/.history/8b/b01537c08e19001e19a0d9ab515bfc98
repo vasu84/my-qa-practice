@@ -1,0 +1,17 @@
+package com.guidejuniorLive.guideJuniorsTest;
+
+import org.openqa.selenium.By;
+import org.testng.annotations.Test;
+
+public class StudentLogin extends BaseClass {
+	
+	@Test
+	public void dashboard()
+	{
+		
+	driver.findElement(By.className("android.widget.LinearLayout")).click();
+	
+	}
+	
+
+}

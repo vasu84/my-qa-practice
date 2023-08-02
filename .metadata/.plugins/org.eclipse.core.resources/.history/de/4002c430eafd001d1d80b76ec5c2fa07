@@ -1,0 +1,5 @@
+package com.testPractice;
+
+public interface In1 {
+
+}

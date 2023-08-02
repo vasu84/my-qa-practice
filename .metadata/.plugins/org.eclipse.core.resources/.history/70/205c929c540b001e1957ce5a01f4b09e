@@ -1,0 +1,29 @@
+package com.intel;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.testng.annotations.Test;
+
+public class PTAintelschool extends Login_Pgae_Intel {
+
+	@Test(priority=0,enabled=false)
+
+	public void meeting() throws InterruptedException {
+
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,500)", " ");
+
+		//select pta
+
+		driver.findElement(By.xpath("//span[@class='nav_sprite nav-meeting']")).click();
+		Thread.sleep(1000);
+		
+		// selecting date 
+		driver.findElement(By.id("start-date")).click();
+
+		
+		// select calendar month year
+		System.out.println(driver.findElement(By.id("datepicker-switch")).getText());
+
+	}
+}

@@ -1,0 +1,32 @@
+package com.testPractice;
+
+public class Access implements In1 ,In2 {
+
+	@Override
+	public void password() {
+		// TODO Auto-generated method stub
+		System.out.println("1223");
+		
+	}
+
+	@Override
+	public void company() {
+		// TODO Auto-generated method stub
+		System.out.println("Xcel corp");
+		
+	}
+
+	@Override
+	public void employee() {
+		// TODO Auto-generated method stub
+		System.out.println("Vasu");
+		
+	}
+	public static void main(String[] args) {
+		Access a = new Access();
+		a.company();
+		a.employee();
+		a.password();
+	}
+
+}

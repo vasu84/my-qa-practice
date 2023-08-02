@@ -1,0 +1,22 @@
+package com.intel;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.testng.annotations.Test;
+
+public class MyattendenceintelSchool extends Login_Pgae_Intel {
+
+	@Test(priority=1)
+	
+	public void attendence() throws InterruptedException {
+	
+	
+		JavascriptExecutor js =(JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(600,0)", " ");
+		
+		Thread.sleep(1000);
+		
+		driver.findElement(By.xpath("//span[@class='nav_sprite nav-attendance']")).click();
+	
+	}
+}

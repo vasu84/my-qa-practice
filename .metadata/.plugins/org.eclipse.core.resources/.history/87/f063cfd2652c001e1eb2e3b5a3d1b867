@@ -1,0 +1,34 @@
+package com.java2_samplework;
+
+public class FabonicSeries {
+
+	public static void main(String[] args) {
+		
+		/*int a=0, b=1;
+		int c;
+		for(int i=0;i<=3;i++) {
+		c=a+b;
+		System.out.println(c);
+		a=b;
+		b=c;
+		
+	}*/
+
+		// print the series upto 100
+		
+		int a=0, b=1;
+		int c;
+		for(int i=0;i<=15;i++) {
+		c=a+b;
+		
+		if(c<=100)
+		//System.out.println(c);
+		
+		a=b;
+		b=c;
+		System.out.println(c);
+		}
+		
+	
+	}
+}

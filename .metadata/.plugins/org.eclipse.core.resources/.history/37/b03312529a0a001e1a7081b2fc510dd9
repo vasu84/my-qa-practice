@@ -1,0 +1,24 @@
+package com.intel;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.testng.annotations.Test;
+
+public class LibraryManagementIntelSchool extends Login_Pgae_Intel {
+
+	
+	@Test(priority=1)
+	
+	public void library() {
+	
+		JavascriptExecutor js= (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,500)", " ");
+		
+		
+		//select library management
+				driver.findElement(By.xpath("//span[@class='nav_sprite nav-library']")).click();
+				
+				driver.findElement(By.id("due-book-count")).click();
+				
+	}
+}

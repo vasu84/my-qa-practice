@@ -1,0 +1,11 @@
+package com.testPractice;
+
+public class MyProfile extends Profile {
+	private int year = 2018;
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+MyProfile b= new MyProfile();
+
+	}
+
+}

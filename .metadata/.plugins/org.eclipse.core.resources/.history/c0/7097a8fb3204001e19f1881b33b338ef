@@ -1,0 +1,32 @@
+package com.seleniumBasicPractice;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class NavigationTolls {
+
+	public static void main(String[] args) throws InterruptedException {
+		
+System.setProperty("webdriver.chrome.driver", 
+		"C:\\Users\\XSC-10286\\eclipse-workspace\\Selenium__loginpage\\Driver\\chromedriver.exe");
+	
+	WebDriver driver = new ChromeDriver();
+	driver.get("https://www.google.com/search?q=facebook&rlz=1C1CHBF_enIN1048IN1048&oq=face&aqs=chrome.0.0i131i355i433i512j46i131i199i433i465i512j0i131i433i512j69i57j0i433i512j0i131i433i512l2j5.3631j1j7&sourceid=chrome&ie=UTF-8");
+	
+	driver.manage().window().maximize();
+
+	driver.findElement(By.id("APjFqb")).sendKeys("intelschool");
+	Thread.sleep(2000);
+	
+	driver.findElement(By.id("APjFqb")).submit();
+	Thread.sleep(2000);
+	
+	driver.navigate().back();
+	Thread.sleep(2000);
+	
+	driver.navigate().to("intelschool");
+	Thread.sleep(2000);
+	}
+
+}

@@ -1,0 +1,11 @@
+package com.testPractice;
+
+public class Profile {
+	public int id= 25 ;
+	
+	public static void main(String[]args) {
+		//Profile.obj = new Profile();
+		System.out.println("id");
+	}
+
+}

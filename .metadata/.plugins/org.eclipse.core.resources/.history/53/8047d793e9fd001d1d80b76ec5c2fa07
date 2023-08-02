@@ -1,0 +1,12 @@
+package com.testPractice;
+
+public interface Academic {
+ static void aca_details() {
+	System.out.println("clgName : ANU");
+	System.out.println("year : 2019");
+	System.out.println("course : EEE");
+}
+ public static void main (String[]args) {
+	 aca_details();
+ }
+}

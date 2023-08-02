@@ -1,0 +1,6 @@
+package teacherLoginpage;
+
+public class Login {
+	@Test
+	driver.get("https://portal.intelschool.in/");
+}

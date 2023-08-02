@@ -1,0 +1,10 @@
+package com.java2_samplework;
+
+public class Encapsulation {
+public static void main(String[]args) {
+	
+	Getter number= new Getter();
+	number.setGetmynum(25);
+	
+}
+}

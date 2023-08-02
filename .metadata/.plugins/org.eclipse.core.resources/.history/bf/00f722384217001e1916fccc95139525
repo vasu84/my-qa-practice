@@ -1,0 +1,54 @@
+package com.guidejunior.guidejunior;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class DataproviderConcept {
+ 
+	
+	WebDriver driver;
+	
+	
+
+	@Test(dataProvider="loginPage")
+	public void testOrnge(String userName, String passWord) {
+		
+		WebDriverManager.chromedriver().setup();
+		
+		driver = new ChromeDriver();
+		
+		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+		driver.manage().window().maximize();
+		
+		driver.findElement(By.name("username")).sendKeys(userName);
+		
+		driver.findElement(By.name("username")).sendKeys(passWord);
+		
+		driver.findElement(By.xpath("//button[@type='submit']")).click();
+		
+	}
+
+	@DataProvider(name="loginPage")
+	 
+	 public Object[][] loginPage() {
+
+			Object[][] data= new Object[2][2];
+			
+			data[0][0]="Admin";
+			data[0][1]="Admin123";
+			
+			data[1][0]="Admin";
+			data[1][1]="Admin1234";
+			
+			/*data[2][0]="dmin";
+			data[2][1]="Admin123";*/
+
+			return data;
+		
+		}
+}

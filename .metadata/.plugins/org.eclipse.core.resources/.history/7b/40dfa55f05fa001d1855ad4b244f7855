@@ -1,0 +1,51 @@
+package com.fbsignup;
+
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class signup {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+System.setProperty("webdriver.chrome.driver", 
+		"C:\\Users\\XSC-10286\\eclipse-workspace\\fbsignup\\chrmdriver\\chromedriver.exe");
+WebDriver driver = new ChromeDriver();
+driver.get("https://www.facebook.com/signup");
+driver.manage().window().maximize();
+WebElement firstName = driver.findElement(By.name("firstname"));
+firstName.sendKeys("siva  ");
+WebElement lastName = driver.findElement(By.name("lastname"));
+lastName.sendKeys("chandu mondeti");
+WebElement mail = driver.findElement(By.xpath("(//input[@type='text'])[3]"));
+mail.sendKeys("stfctdhg@gmaall.comm");
+WebElement remail = driver.findElement(By.xpath("(//input[@type='text'])[4]"));
+remail.sendKeys("stfctdhg@gmaall.comm");
+WebElement password = driver.findElement(By.xpath("//input[@type='password']"));
+password.sendKeys("asdfgsg2546@3#$");
+WebElement day = driver.findElement(By.id("day"));
+day.click();
+Select a = new Select(day);
+a.selectByIndex(10);
+WebElement month = driver.findElement(By.id("month"));
+month.click();
+Select b = new Select(month);
+b.selectByIndex(10);
+WebElement year = driver.findElement(By.id("year"));
+year.click();
+Select c = new Select(year);
+c.selectByVisibleText("1990");
+
+WebElement sex = driver.findElement(By.name("sex"));
+sex.click();
+
+
+WebElement sexm = driver.findElement(By.name("sex"));
+sexm.click();
+
+	}
+
+}

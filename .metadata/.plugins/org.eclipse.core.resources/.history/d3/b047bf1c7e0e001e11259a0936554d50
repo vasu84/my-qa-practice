@@ -1,0 +1,58 @@
+package com.testng;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
+
+public class Parameterized_Test {
+	
+	WebDriver driver;
+	@Parameters({"username","password"})
+	
+	@Test
+	
+	
+	public void login(@Optional("siva")String username,@Optional("1234")String password) {
+		// TODO Auto-generated method stub
+System.out.println("The user name is:"+username);
+System.out.println("The password is :"+password);
+	}
+	
+	
+	@Parameters("browserLaunch")
+	
+	@BeforeTest
+	
+	public void launchBrowser(String browserLaunch){
+		switch(browserLaunch){
+		
+		case "edge":
+		System.setProperty("webdriver.edge.driver",
+				"C:\\Users\\XSC-10286\\eclipse-workspace\\java_practice\\Driver\\msedgedriver.exe");
+		
+		driver = new EdgeDriver();
+		
+		
+		case "firefox":
+			System.setProperty("webdriver.gecko.driver",
+					"C:\\Users\\XSC-10286\\eclipse-workspace\\java_practice\\Driver\\geckodriver.exe");
+			
+			driver = new FirefoxDriver();
+			break;
+		
+		}
+	}
+	
+	@Parameters("url")
+	@Test
+	public void geturl(String url) {
+		
+		driver.get(url);
+	}
+	
+	
+}

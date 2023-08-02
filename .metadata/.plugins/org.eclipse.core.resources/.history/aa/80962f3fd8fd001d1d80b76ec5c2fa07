@@ -1,0 +1,18 @@
+package com.testPractice;
+
+public class Profile {
+	public int id= 25 ;
+	public int age =28; 
+	
+	public static void main(String[]args) {
+		Profile a= new Profile();
+		Profile b= new Profile();
+		a.id =35;
+		b.age=82;
+				
+		System.out.println("a");
+		System.out.println("b");
+	}
+
+	
+}

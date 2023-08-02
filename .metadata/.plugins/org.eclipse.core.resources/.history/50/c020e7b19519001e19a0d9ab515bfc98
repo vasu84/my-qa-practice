@@ -1,0 +1,13 @@
+deviceName=INTEX_AQUA_LIONS_3
+browserTitle=Guide Junior
+udid=FEZLG6I7QSCYN7FA
+platformName=Android
+platformVersion=7.0
+appPackage=com.guidejunior
+launcherActivity=com.guidejunior.ui.router.RouterActivity
+url=http://127.0.0.1:4723/wd/hub
+mailto:mailid=raji@gmail.com
+password=Raji283!
+
+
+

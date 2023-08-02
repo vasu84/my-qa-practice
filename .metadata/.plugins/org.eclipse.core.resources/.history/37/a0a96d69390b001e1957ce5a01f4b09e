@@ -1,0 +1,30 @@
+package com.intel;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.testng.annotations.Test;
+
+public class CertificateRequest extends Login_Pgae_Intel {
+	
+	@Test(priority=1)
+	
+	public void certificate() throws InterruptedException {
+	
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,500)", " ");
+		
+		//select Certificate
+		
+				driver.findElement(By.xpath("//span[@class='nav_sprite nav-certificate']")).click();
+				Thread.sleep(1000);
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

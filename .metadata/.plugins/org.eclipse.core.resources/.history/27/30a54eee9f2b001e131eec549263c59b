@@ -1,0 +1,20 @@
+package com.java2_samplework;
+
+import java.util.Scanner;
+
+public class Even_odd {
+
+	public static void main(String[] args) {
+		Scanner obj=new Scanner(System.in);
+
+		int n=obj.nextInt();
+
+		if(n%2==0) 
+			System.out.println("even");
+			else
+				System.out.println("odd");	
+		
+
+	}
+
+}

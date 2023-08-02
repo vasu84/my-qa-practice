@@ -1,0 +1,51 @@
+package com.seleniumBasicPractice;
+
+import java.util.Set;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Windowshandling2 {
+
+	public static void main(String[] args) throws InterruptedException {
+		System.setProperty("webdriver.chrome.driver", 
+				"C:\\\\Users\\\\XSC-10286\\\\eclipse-workspace\\\\Selenium__loginpage\\\\Driver\\\\chromedriver.exe");
+      
+		WebDriver driver =new ChromeDriver();
+		
+		driver.get("https://portal.intelschool.in/");
+		
+		driver.manage().window().maximize();
+		
+		Thread.sleep(2000);
+
+		driver.findElement(By.id("username")).sendKeys("rajkamal");
+		driver.findElement(By.id("password")).sendKeys("Guruom@5");
+		driver.findElement(By.id("user-login")).click();
+		//Thread.sleep(2000);
+		
+		String parentWindowHandle=driver.getWindowHandle(); // handle of the parent window
+		
+		System.out.println("parent Window Handle is ---  " +parentWindowHandle);  //  o/p is parent Window Handle is ---  
+		
+		driver.findElement(By.xpath("/html/body/section/div[2]/ul/li[8]/a")).click();
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("/html/body/section/div[3]/div/div/div/div[1]/div/div[2]/div[2]/div[1]/div[1]/div/div[5]/p/span")).click();
+		Thread.sleep(2000);
+		
+		 // now we are handles the all windows we opened
+		
+		Set<String> windowHandle = driver.getWindowHandles();// 
+		
+		for (String string : windowHandle) { // for iterate the windows
+			System.out.println(string);
+		}
+		
+	 driver.switchTo().window(parentWindowHandle); // here we switched to parent window from child window.
+	 System.out.println(driver.getTitle());
+	}
+	
+
+}

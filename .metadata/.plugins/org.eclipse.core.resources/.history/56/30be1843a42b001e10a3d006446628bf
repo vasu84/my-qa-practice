@@ -1,0 +1,29 @@
+package com.java2_samplework;
+
+
+import java.util.Scanner;
+
+public class Even_odd {
+
+	public static void main(String[] args) {
+
+
+		for(int i=0;i<=4;i++) { // for entering multiple entries in console pannel;
+
+			System.out.println("enter the number");
+			Scanner obj=new Scanner(System.in);
+			
+			for(int x=0;x<100;x++) {
+
+				int n=obj.nextInt();
+
+				if(n%2==0) 
+					System.out.println("even");
+				else
+					System.out.println("odd");	
+
+
+			}
+		}
+	}
+}

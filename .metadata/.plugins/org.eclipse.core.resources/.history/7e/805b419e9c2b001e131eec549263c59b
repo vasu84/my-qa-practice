@@ -1,0 +1,10 @@
+package com.java2_samplework;
+
+public class Swapping_numbers {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

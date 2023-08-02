@@ -1,0 +1,36 @@
+package com.testng;
+
+import org.testng.annotations.Ignore;
+import org.testng.annotations.Test;
+
+@Ignore
+public class Grouping {
+ @Ignore
+	@Test(groups="fruits")
+	private void apple() {
+		// TODO Auto-generated method stub
+System.out.println("print apple");
+	}
+	
+	@Test(groups="fruits")
+	private void orange() {
+		// TODO Auto-generated method stub
+System.out.println("print orange");
+	}
+	@Test(groups="fruits")
+	private void pineapple() {
+		// TODO Auto-generated method stub
+System.out.println("print pineapple");
+	}
+	@Test(groups="Vegetables")
+	private void carrot() {
+		// TODO Auto-generated method stub
+System.out.println("print carrot");
+	}
+	@Test(groups="Vegetables")
+	private void cucumber() {
+		// TODO Auto-generated method stub
+System.out.println("print cucumber");
+	}
+	
+}

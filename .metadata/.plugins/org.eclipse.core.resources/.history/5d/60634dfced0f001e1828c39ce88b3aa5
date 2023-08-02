@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<listeners>
+		<listener class-name="com.testng.Parameterized_Test"></listener>
+	</listeners>
+	  <parameter name="url" value="https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"/>
+	 
+	  <parameter name="Username" value="Vasu"/>
+	<parameter name="password" value="345"/>
+	
+	<parameter name="UserName" value="Admin"/>
+	<parameter name="PassWord" value="admin123"/>
+		
+
+  <test thread-count="5" name="Test">
+	  
+	 <parameter name="browserLaunch" value="firefox"></parameter>
+	  <parameter name="url" value="https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"/>
+	   
+	
+	
+    <classes>
+		
+      <class name="com.testng.Parameterized_Test"/>
+      
+      
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

@@ -1,0 +1,24 @@
+package com.intel;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.Test;
+
+public class ExamIntelSchool extends Login_Pgae_Intel {
+	
+	@Test(priority=0)
+	
+	public void examSchedule() {
+		
+		
+		Actions ac = new Actions(driver);
+		 
+		WebElement exam = driver.findElement(By.xpath("//span[@class='nav_sprite nav-exam']")); 
+	
+	
+		ac.clickAndHold(exam);
+	
+	}
+
+}

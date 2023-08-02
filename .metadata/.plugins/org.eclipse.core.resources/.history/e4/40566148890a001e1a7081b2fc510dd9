@@ -1,0 +1,49 @@
+package com.intel;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.Test;
+
+public class MyattendenceintelSchool extends Login_Pgae_Intel {
+
+	@Test(priority=1)
+	
+	public void attendence() throws InterruptedException {
+	
+	
+		JavascriptExecutor js =(JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,400)", " ");
+		
+		Thread.sleep(1000);
+		
+		//select attendence sheet
+		driver.findElement(By.xpath("//span[@class='nav_sprite nav-attendance']")).click();
+	
+		// selecting month year
+		WebElement month = driver.findElement(By.id("get-attend-month"));
+		month.click();
+		 Thread.sleep(1000);
+		 
+		/*Select monthyear = new Select(month);
+		monthyear.selectByVisibleText("November-2019");*/
+		
+		 JavascriptExecutor monthyear = (JavascriptExecutor) driver;
+		 monthyear.executeScript("arguments[0].value='November - 2019'", month);
+		 
+		Thread.sleep(1000);
+		
+		driver.findElement(By.id("teacher_download")).click();
+		
+		Thread.sleep(1000);
+		
+		//selecting start date
+		
+		driver.findElement(By.id("start-date")).click();
+		Thread.sleep(1000);
+		
+		driver.findElement(By.xpath("(//th[@class='datepicker-switch'])[1]")).click();
+		
+	}
+}

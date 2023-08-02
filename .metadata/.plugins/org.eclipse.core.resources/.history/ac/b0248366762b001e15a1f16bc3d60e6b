@@ -1,0 +1,27 @@
+package com.java2_samplework;
+
+import java.util.Scanner;
+
+public class ScannerCLasses {
+
+	
+public static void main(String[]args)	{
+	
+	Scanner sc= new Scanner(System.in);
+	
+System.out.println("Printing name , age , salary");
+
+String name= sc.nextLine(); // String input
+
+int age= sc.nextInt();    // int input
+
+Double salary= sc.nextDouble();  // double input
+
+
+System.out.println("name of the person"+name);
+
+System.out.println("age of the person"+age);
+
+System.out.println("salary of the person"+salary);
+}
+}

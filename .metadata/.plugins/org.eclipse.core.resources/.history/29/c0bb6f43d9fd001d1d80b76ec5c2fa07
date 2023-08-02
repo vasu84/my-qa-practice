@@ -1,0 +1,13 @@
+package com.testPractice;
+
+public class Profile {
+	 int id =256;
+	int age=51; 
+	
+	public static void main(String[]args) {
+		System.out.println(id);
+				
+	}
+
+	
+}

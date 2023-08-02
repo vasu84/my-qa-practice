@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="com.intel.ExamIntelSchool">
+        <methods>
+          <include name="browserLaunch"/>
+          <include name="examSyllabus"/>
+          <include name="examSchedule"/>
+        </methods>
+      </class> <!-- com.intel.ExamIntelSchool -->
+      <class name="com.intel.WorksheetIntelSchool">
+        <methods>
+          <include name="browserLaunch"/>
+          <include name="worksheet"/>
+        </methods>
+      </class> <!-- com.intel.WorksheetIntelSchool -->
+      <class name="com.intel.TimeTableIntellSchool">
+        <methods>
+          <include name="adding"/>
+          <include name="browserLaunch"/>
+        </methods>
+      </class> <!-- com.intel.TimeTableIntellSchool -->
+      <class name="com.intel.SubjectIntel">
+        <methods>
+          <include name="Subject"/>
+          <include name="browserLaunch"/>
+        </methods>
+      </class> <!-- com.intel.SubjectIntel -->
+      <class name="com.intel.StudentIntel">
+        <methods>
+          <include name="Student"/>
+          <include name="examresult"/>
+          <include name="studentttendance"/>
+          <include name="browserLaunch"/>
+          <include name="studentinfo"/>
+        </methods>
+      </class> <!-- com.intel.StudentIntel -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

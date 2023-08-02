@@ -1,0 +1,8 @@
+deviceName=LG K9
+udid=LMX2103b4ba861
+platformName=Android
+platformVersion=7.1.2
+appPackage=com.guidejunior
+launcherActivity=com.guidejunior.ui.router.RouterActivity
+url=http://127.0.0.1:4723/wd/hub
+

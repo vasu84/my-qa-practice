@@ -1,0 +1,38 @@
+package com.seleniumBasicPractice;
+
+import java.util.Set;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class WindowHandles {
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver",
+				"C:\\Users\\XSC-10286\\eclipse-workspace\\Selenium__loginpage\\Driver\\chromedriver.exe");
+   
+		WebDriver driver = new ChromeDriver();
+		
+		driver.get("https://guidejuniors.com/");
+		 
+		driver.manage().window().maximize();
+		
+		String parentWindowHandle = driver.getWindowHandle();
+		
+		System.out.println("my parent window handle is -- " + parentWindowHandle);
+		
+		driver.findElement(By.xpath("/html/body/div[1]/div/div/div[10]/div/div/div[2]/a[3]")).click();
+		
+		Set<String> windowHandles = driver.getWindowHandles(); // every window has a unique address for storing unique elements so we use "set" of string
+		                                                            // "list" string may return duplication values so here we didn't use 
+	
+	     for (String windowHandle : windowHandles) {
+	    	 System.out.println(windowHandle);
+			
+		}
+	
+	
+	}
+
+}

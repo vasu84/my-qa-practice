@@ -1,0 +1,28 @@
+package com.guidejunior.guidejunior;
+
+import org.testng.annotations.DataProvider;
+
+public class DataproviderConcept {
+ 
+	@DataProvider(name="loginPage")
+ 
+ public Object[][] loginPage() {
+
+		Object[][] data= new Object[3][3];
+		
+		data[0][0]="Admin";
+		data[0][1]="Admin123";
+		
+		data[1][0]="Admin";
+		data[1][1]="Admin1234";
+		
+		data[2][0]="dmin";
+		data[2][1]="Admin123";
+
+		return data;
+	
+	}
+
+	public void testorng
+
+}

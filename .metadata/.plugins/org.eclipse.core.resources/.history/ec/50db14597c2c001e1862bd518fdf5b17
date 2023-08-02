@@ -1,0 +1,17 @@
+package com.java2_samplework;
+
+public class Getter {
+
+private int n;
+
+ int getN() {
+	return n;
+}
+
+public void setN(int n) {
+	this.n = n;
+}	
+
+	}
+
+

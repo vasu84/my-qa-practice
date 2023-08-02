@@ -1,0 +1,13 @@
+deviceName= Nokia C01 Plus
+browserTitle=Guide Junior
+udid=9T19545LA12B2301665
+platformName=Android
+platformVersion=11
+appPackage=com.guidejunior
+launcherActivity=com.guidejunior.ui.router.RouterActivity
+url=http://127.0.0.1:4723/wd/hub
+mailid=raji@gmail.com
+password=Raji283!
+
+
+

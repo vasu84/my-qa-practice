@@ -1,0 +1,18 @@
+package com.testPractice;
+
+public class MyProfile extends Profile {
+	private int year = 2018;
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+MyProfile b= new MyProfile();
+myDetails();
+System.out.println("ïd         : " + b.id);
+
+//System.out.println( "age   : " + b.age); // we can't use private out side the class
+
+System.out.println( "name       : " + b.name);
+System.out.println( "Grad_year  : " + b.year);
+
+	}
+
+}

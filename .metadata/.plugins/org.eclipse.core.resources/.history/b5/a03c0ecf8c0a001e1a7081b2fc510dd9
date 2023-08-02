@@ -1,0 +1,78 @@
+package com.intel;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
+import org.testng.annotations.Test;
+
+public class MyattendenceintelSchool extends Login_Pgae_Intel {
+
+	@Test(priority=1)
+	
+	public void attendence() throws InterruptedException {
+	
+	
+		JavascriptExecutor js =(JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,400)", " ");
+		
+		Thread.sleep(1000);
+		
+		//select attendence sheet
+		driver.findElement(By.xpath("//span[@class='nav_sprite nav-attendance']")).click();
+	
+		// selecting month year
+		WebElement month = driver.findElement(By.id("get-attend-month"));
+		month.click();
+		 Thread.sleep(1000);
+		 
+		/*Select monthyear = new Select(month);
+		monthyear.selectByVisibleText("November-2019");*/
+		
+		 JavascriptExecutor monthyear = (JavascriptExecutor) driver;
+		 monthyear.executeScript("arguments[0].value='November - 2019'", month);
+		 
+		Thread.sleep(1000);
+		
+		driver.findElement(By.id("teacher_download")).click();
+		
+		Thread.sleep(1000);
+		
+		//selecting start date
+		
+		driver.findElement(By.id("start-date")).click();
+		Thread.sleep(1000);
+		      
+		           
+		       // here we are storing the values what we want
+		String monthyear1="May 2019";
+		String day="10";
+		
+		// here we are using loop condition 
+		while(true) {
+		String monthyear2 = driver.findElement(By.xpath("(//th[@class='datepicker-switch'])[1]")).getText();//selecting the element
+		
+		if(monthyear2.equals(monthyear1))  // if monthyear is equal to what we given previously in the string (May 2019), then only it execute
+			break;                         // otherwise it goes to else condition and click backward navigation until if condition is true because we are using while loop
+		else
+			driver.findElement(By.xpath("(//th[@class='prev'])[1]")).click();
+		
+	}
+		// after that we find the particular element by using findelEments. 
+		 List<WebElement> particularDay = driver.findElements(By.xpath("//table/tbody/tr[2]/td[6]"));
+		 
+		 for (WebElement a : particularDay) {   // for each loop- the elements in list so we have to  iterate 
+			
+			 
+		String text = a.getText();
+			System.out.println(text); 
+			 
+			 if(text.equals(day)) {
+				a.click();
+			 }
+			
+		}
+
+}
+}

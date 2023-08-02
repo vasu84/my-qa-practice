@@ -1,0 +1,24 @@
+package com.java2_samplework;
+
+import java.util.Scanner;
+
+public class Factorial {
+
+	public static void main(String[] args) {
+		
+	Scanner obj= new Scanner(System.in)	;
+	
+	System.out.println("factorial");
+	
+	int n= obj.nextInt();
+	int c;
+	int factorial=1;
+	
+	for(int i=1;i<=n;i++) {
+		c=factorial*i;
+	}
+	
+	System.out.println(factorial);
+	}
+
+}

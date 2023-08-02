@@ -1,0 +1,15 @@
+package com.intel;
+
+import org.openqa.selenium.By;
+import org.testng.annotations.Test;
+
+public class MyattendenceintelSchool extends Login_Pgae_Intel {
+
+	@Test(priority=0)
+	
+	public void attendence() {
+	
+	driver.findElement(By.xpath("//span[@class='nav_sprite nav-attendance']")).click();
+	
+	}
+}

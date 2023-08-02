@@ -1,0 +1,95 @@
+package com.seleniumBasicPractice;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Xpathaxsis {
+
+	public static void main(String[] args) throws InterruptedException {
+		System.setProperty("webdriver.chrome.driver",
+				"C:\\Users\\XSC-10286\\eclipse-workspace\\Selenium__loginpage\\Driver\\chromedriver.exe");
+
+		WebDriver driver = new ChromeDriver();
+		driver.get("http://register.rediff.com/register/register.php?FormName=user_details");
+
+		driver.manage().window().maximize();
+		Thread.sleep(2000);
+
+
+		// following axis , taking full name as current node and the fullname box is follwing node
+
+	/*	WebElement fullname = driver.findElement(By.xpath("//td[text()='Full Name']//following::input[1]"));
+		fullname.sendKeys("ksvshmv");
+
+		Thread.sleep(2000);
+
+		fullname.clear();
+		Thread.sleep(2000);
+
+		WebElement mail = driver.findElement(By.xpath("//td[text()='Full Name']//following::input[2]"));
+		mail.sendKeys("VGja1565$%^");
+		Thread.sleep(2000);
+
+		mail.clear();
+		Thread.sleep(2000); */
+
+
+		// preceding axis , taking Choose a Rediffmail ID as current node and the fullname box is preceding  node
+
+	/*	WebElement fName = driver.findElement(By.xpath("//td[text()='Choose a Rediffmail ID']//preceding::input"));
+		fName.sendKeys("ksvshmv");
+
+		Thread.sleep(2000);
+
+		
+ 
+		driver.findElement(By.xpath("//td[text()='Full Name']//following::input[3]")).click();
+		Thread.sleep(2000);
+		
+		driver.findElement(By.id("newpasswd")).sendKeys("sdgdfjh502");
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//td[text()='Alternate Email Address']//preceding::input[1]")).sendKeys("jajgtnfjsdnv");
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//td[text()='Retype password']//following::input[2]")).sendKeys("gjubyas");
+		Thread.sleep(2000);
+
+
+		driver.findElement(By.xpath("//td[text()='Retype password']//following::input[3]")).click();
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//td[@id='mob_txt']//following::input[2]")).sendKeys("256566998629869");
+		Thread.sleep(2000);
+		
+		//year
+		driver.findElement(By.xpath("//td[text()='Date of Birth']//following::select[3]")).click();
+		
+		Thread.sleep(2000);  */
+		
+		// preceding- sibling 
+		                            //selecting month. month is preceding sibling for year
+		driver.findElement(By.xpath("(//select[@onchange='fieldTrack(this);'])[4]//preceding-sibling::select[1]")).click();
+		Thread.sleep(2000);
+		                               //selecting day. day is preceding sibling for year
+		driver.findElement(By.xpath("(//select[@onchange='fieldTrack(this);'])[4]//preceding-sibling::select[2]")).click();
+		Thread.sleep(2000);
+		
+		           // selecting gender(female) by following xpath  
+		driver.findElement(By.xpath("//input[@value='m']//following::input[1]")).click();
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//input[@value='m']//following::input[3]")).click();
+		Thread.sleep(2000);
+		
+		
+		
+		driver.close();
+		
+		
+		
+	}
+
+}

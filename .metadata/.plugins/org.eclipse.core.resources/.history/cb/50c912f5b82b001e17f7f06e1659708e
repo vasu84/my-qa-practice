@@ -1,0 +1,12 @@
+package com.java2_samplework;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Collection_Map {
+public static void main(String[] args) {
+	Map<Integer,String> m = new HashMap<>();
+	m.put(1, "siva");
+	System.out.println(m);
+}
+}

@@ -1,0 +1,10 @@
+package com.java2_samplework;
+
+public interface Interface1 {
+
+	default void vasu(){
+		System.out.println("ffff");
+	}
+	void siva();
+	
+}

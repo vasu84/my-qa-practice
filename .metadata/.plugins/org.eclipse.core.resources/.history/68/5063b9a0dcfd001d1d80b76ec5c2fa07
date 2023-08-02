@@ -1,0 +1,23 @@
+package com.testPractice;
+
+public class Profile {
+	private static void myDetails() {
+		System.out.println("my details is ");
+	}
+	public int id =256;
+	private int age=51; 
+	protected String name= "siva";
+	public static void main(String[]args) {
+		
+		
+		Profile a = new Profile();
+		myDetails();
+		
+		System.out.println(a.id);
+		System.out.println(a.age);
+		System.out.println(a.name);
+				
+	}
+
+	 
+}

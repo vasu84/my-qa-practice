@@ -1,0 +1,116 @@
+package com.petStoreTesting;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class AccountInformation {
+
+	public static void main(String[] args) throws InterruptedException {
+		
+		System.setProperty("webdriver.chrome.driver",
+				"C:\\Users\\XSC-10286\\eclipse-workspace\\Selenium__loginpage\\Driver\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://petstore.octoperf.com/actions/Account.action?newAccountForm=");
+		driver.manage().window().maximize();
+		
+		         // USER INFORMATION
+		WebElement username = driver.findElement(By.name("username"));
+		
+		if (username.isDisplayed()) {
+			if(username.isEnabled()) {
+				username.sendKeys("petstore");
+				String a=username.getAttribute("value");
+				System.out.println(a);
+			}
+			else
+				System.out.println("username box is not enabled");
+		}
+		
+		else
+			System.out.println("username box is not displayed");
+
+		Thread.sleep(1500);
+		
+		WebElement password = driver.findElement(By.name("password"));
+		password.sendKeys("2563zsdg");
+		Thread.sleep(1000);
+		
+		WebElement repeatpassword = driver.findElement(By.name("repeatedPassword"));
+		repeatpassword.sendKeys("2563zsdg");
+		Thread.sleep(1000);
+		
+		  // Account Information
+		
+	/*	WebElement fName = driver.findElement(By.name("account.firstName"));
+		fName.sendKeys("chandar");
+		Thread.sleep(1000);
+		
+		WebElement lName = driver.findElement(By.name("account.lastName"));
+	    lName.sendKeys("tirupati");
+		Thread.sleep(1000);
+		
+		WebElement mail = driver.findElement(By.name("account.email"));
+		mail.sendKeys("chandra@gmail.com");
+		Thread.sleep(1000);
+		
+		WebElement mobile= driver.findElement(By.name("account.phone"));
+		mobile.sendKeys("2658974525");
+		Thread.sleep(1000);
+		
+		WebElement address1= driver.findElement(By.name("account.address1"));
+		address1.sendKeys(" rk beach, rk mandir");
+		Thread.sleep(1000);
+		
+		WebElement address2= driver.findElement(By.name("account.address2"));
+		address2.sendKeys("vizag,ap");
+		Thread.sleep(1000);
+		
+		WebElement city= driver.findElement(By.name("account.city"));
+		city.sendKeys("vizag");
+		Thread.sleep(1000);
+		
+		WebElement pincode= driver.findElement(By.name("account.zip"));
+		pincode.sendKeys("256983");
+		Thread.sleep(1000);
+		
+		WebElement state= driver.findElement(By.name("account.state"));
+		state.sendKeys("andhrapradesh");
+		Thread.sleep(1000);
+		
+		WebElement country= driver.findElement(By.name("account.country"));
+		country.sendKeys("india");
+		Thread.sleep(1000);   
+		
+		  
+		//Profile Information
+		WebElement language= driver.findElement(By.name("account.languagePreference"));
+		language.click();
+		Thread.sleep(1000);
+		 Select a= new Select(language);
+		// a.selectByIndex(1);
+		 Thread.sleep(3000);
+	 a.selectByVisibleText("japanese"); */
+		 
+		/* WebElement pet= driver.findElement(By.name("account.favouriteCategoryId"));
+			pet.click();
+			Thread.sleep(2000);
+			 Select b=new Select(pet);
+			 b.selectByIndex(1);
+			 Thread.sleep(3000);
+			// a.selectByValue(2);
+			 b.selectByVisibleText("REPTILES"); */
+			 
+			 WebElement mylist= driver.findElement(By.name("account.listOption"));
+				mylist.click();
+				mylist.isSelected();
+			 
+				 WebElement myBanner= driver.findElement(By.name("account.bannerOption"));
+					myBanner.click();
+					myBanner.isSelected();
+	}
+	
+
+}
